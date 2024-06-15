@@ -1,4 +1,4 @@
-package com.bruce.ducache;
+package com.bruce.ducache.core;
 
 import io.netty.buffer.ByteBuf;
 import io.netty.channel.ChannelHandlerContext;

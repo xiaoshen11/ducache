@@ -1,5 +1,6 @@
-package com.bruce.ducache;
+package com.bruce.ducache.core;
 
+import com.bruce.ducache.DuPlugin;
 import io.netty.bootstrap.ServerBootstrap;
 import io.netty.buffer.PooledByteBufAllocator;
 import io.netty.channel.Channel;
@@ -10,8 +11,6 @@ import io.netty.channel.epoll.EpollChannelOption;
 import io.netty.channel.nio.NioEventLoopGroup;
 import io.netty.channel.socket.SocketChannel;
 import io.netty.channel.socket.nio.NioServerSocketChannel;
-import io.netty.handler.codec.redis.RedisDecoder;
-import io.netty.handler.codec.redis.RedisEncoder;
 import io.netty.handler.logging.LogLevel;
 import io.netty.handler.logging.LoggingHandler;
 import io.netty.util.concurrent.DefaultThreadFactory;
@@ -21,7 +20,7 @@ import org.springframework.stereotype.Component;
  * @date 2024/6/12
  */
 @Component
-public class DuCacheServer implements DuPlugin{
+public class DuCacheServer implements DuPlugin {
 
     int port = 6379;
     EventLoopGroup workerGroup;
