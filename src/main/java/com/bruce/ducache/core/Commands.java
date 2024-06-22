@@ -17,7 +17,13 @@ import com.bruce.ducache.command.MsetCommand;
 import com.bruce.ducache.command.PingCommand;
 import com.bruce.ducache.command.RpopCommand;
 import com.bruce.ducache.command.RpushCommand;
+import com.bruce.ducache.command.SaddCommand;
+import com.bruce.ducache.command.ScardCommand;
 import com.bruce.ducache.command.SetCommand;
+import com.bruce.ducache.command.SismemberCommand;
+import com.bruce.ducache.command.SmembersCommand;
+import com.bruce.ducache.command.SpopCommand;
+import com.bruce.ducache.command.SremCommand;
 import com.bruce.ducache.command.StrlenCommand;
 
 import java.util.HashMap;
@@ -60,6 +66,22 @@ public class Commands {
         register(new LlenCommand());
         register(new LindexCommand());
         register(new LrangeCommand());
+
+        // set
+        register(new SaddCommand());
+        register(new SmembersCommand());
+        register(new SismemberCommand());
+        register(new ScardCommand());
+        register(new SremCommand());
+        register(new SpopCommand());
+
+
+
+        // hash
+
+
+
+        // zset
 
     }
 
