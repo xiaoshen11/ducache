@@ -32,6 +32,12 @@ import com.bruce.ducache.command.SmembersCommand;
 import com.bruce.ducache.command.SpopCommand;
 import com.bruce.ducache.command.SremCommand;
 import com.bruce.ducache.command.StrlenCommand;
+import com.bruce.ducache.command.ZaddCommand;
+import com.bruce.ducache.command.ZcardCommand;
+import com.bruce.ducache.command.ZcountCommand;
+import com.bruce.ducache.command.ZrankCommand;
+import com.bruce.ducache.command.ZremCommand;
+import com.bruce.ducache.command.ZscoreCommand;
 
 import java.util.HashMap;
 import java.util.LinkedHashMap;
@@ -92,9 +98,12 @@ public class Commands {
         register(new HexistsCommand());
 
         // zset
-
-
-
+        register(new ZaddCommand());
+        register(new ZcardCommand());
+        register(new ZcountCommand());
+        register(new ZscoreCommand());
+        register(new ZrankCommand());
+        register(new ZremCommand());
     }
 
     public static void register(Command command){

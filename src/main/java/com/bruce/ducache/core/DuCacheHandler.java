@@ -76,11 +76,11 @@ public class DuCacheHandler extends SimpleChannelInboundHandler<String> {
         return "-" + msg + CRLF;
     }
 
-    private void integer(ChannelHandlerContext ctx, int i) {
+    private void integer(ChannelHandlerContext ctx, Integer i) {
         writeByteBuf(ctx,integerEncode(i));
     }
 
-    private static String integerEncode(int i){
+    private static String integerEncode(Integer i){
         return ":" + i + CRLF;
     }
 
