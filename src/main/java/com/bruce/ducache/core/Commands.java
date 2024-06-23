@@ -5,6 +5,13 @@ import com.bruce.ducache.command.DecrCommand;
 import com.bruce.ducache.command.DelCommand;
 import com.bruce.ducache.command.ExistsCommand;
 import com.bruce.ducache.command.GetCommand;
+import com.bruce.ducache.command.HdelCommand;
+import com.bruce.ducache.command.HexistsCommand;
+import com.bruce.ducache.command.HgetCommand;
+import com.bruce.ducache.command.HgetallCommand;
+import com.bruce.ducache.command.HlenCommand;
+import com.bruce.ducache.command.HmgetCommand;
+import com.bruce.ducache.command.HsetCommand;
 import com.bruce.ducache.command.IncrCommand;
 import com.bruce.ducache.command.InfoCommand;
 import com.bruce.ducache.command.LindexCommand;
@@ -75,13 +82,18 @@ public class Commands {
         register(new SremCommand());
         register(new SpopCommand());
 
-
-
         // hash
-
-
+        register(new HsetCommand());
+        register(new HgetCommand());
+        register(new HgetallCommand());
+        register(new HlenCommand());
+        register(new HmgetCommand());
+        register(new HdelCommand());
+        register(new HexistsCommand());
 
         // zset
+
+
 
     }
 
